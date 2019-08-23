@@ -1,9 +1,17 @@
 <?php 
 
+$dbhost = 'ql7.freemysqlhosting.net';
+         $dbuser = 'sql7302807';
+         $dbpass = 'iB6QcldJ2N';
+         $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+         
+         if(! $conn ) {
+            die('Could not connect: ' . mysql_error());
+         }
+         echo 'Connected successfully';
+         mysql_close($conn);
 
 
-
-mysql_connect ([ string $server = ini_get("ql7.freemysqlhosting.net") [, string $username = ini_get("sql7302807") [, string $password = ini_get("iB6QcldJ2N") [, bool $new_link = FALSE [, int $client_flags = 0 ]]]]] ) : resource
 
 
 
