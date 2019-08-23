@@ -1,16 +1,23 @@
 <?php 
 
+$servername = "ql7.freemysqlhosting.net";
+$username = "sql7302807";
+$password = "iB6QcldJ2N";
 
-$server="sql7.freemysqlhosting.net";
-$username="sql7302807";
-$password="iB6QcldJ2N";
-$dbname="sql7302807";
-try {
-	$conn = new PDO("mysql:host=$server;dbname=$dbname",$username,$password);
-	$conn ->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-	echo "Veri tabanı bağlantısı başarılı";
-} catch (PDOException $e) {
-	echo "Hata Oluştu:" $e->getMessage();
-	
-}
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+
+
+
+
+
+
+
+
  ?>
