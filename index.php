@@ -1,14 +1,9 @@
 <?php 
 
-$link = mysql_connect('ql7.freemysqlhosting.net', 'sql7302807', 'iB6QcldJ2N');
-if (!$link) {
-    die('Could not connect: ' . mysql_error());
-}
-echo 'Connected successfully';
-mysql_close($link);
 
 
 
+mysql_connect ([ string $server = ini_get("ql7.freemysqlhosting.net") [, string $username = ini_get("sql7302807") [, string $password = ini_get("iB6QcldJ2N") [, bool $new_link = FALSE [, int $client_flags = 0 ]]]]] ) : resource
 
 
 
