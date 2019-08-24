@@ -2,7 +2,7 @@
 
 
 
-echo "sddd";
+
 $user="sql7302807";
  $pass="iB6QcldJ2N";
 try {
