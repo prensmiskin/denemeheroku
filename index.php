@@ -1,16 +1,20 @@
 <?php 
 
-$dbhost = 'ql7.freemysqlhosting.net';
-         $dbuser = 'sql7302807';
-         $dbpass = 'iB6QcldJ2N';
-         $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-         
-         if(! $conn ) {
-            die('Could not connect: ' . mysql_error());
-         }
-         echo 'Connected successfully';
-         mysql_close($conn);
 
+<?php
+$user="sql7302807";
+ $pass="iB6QcldJ2N";
+try {
+    $dbh = new PDO('ql7.freemysqlhosting.net', $user, $pass);
+    
+    foreach($dbh->query('SELECT * from FOO') as $row) {
+        print_r($row);
+    }
+    $dbh = null;
+} catch (PDOException $e) {
+    print "Hata!: " . $e->getMessage() . "<br/>";
+    die();
+}
 
 
 
