@@ -1,12 +1,8 @@
-<?php 
-
-
-
-
-$user="sql7302807";
- $pass="iB6QcldJ2N";
+<?php
+$user="epiz_24131462";
+ $pass="CIzewt7NzMGYGh";
 try {
-    $dbh = new PDO('sql7.freemysqlhosting.net;dbname=sql7302807', $user, $pass);
+    $dbh = new PDO('mysql:host=sql209.epizy.com;dbname=epiz_24131462_deneme', $user, $pass);
     
     foreach($dbh->query('SELECT * from FOO') as $row) {
         print_r($row);
