@@ -21,13 +21,9 @@ try {
 
 	
 	
-    $sql = "INSERT INTO gumus (name, ad)
-    VALUES ('$name', '$ad')";
+   
     // use exec() because no results are returned
-    $conn->exec($sql);
-    echo "New record created successfully";
-	$Soyad = "John";
-	$re = mysql_query("SELECT * FROM gumus WHERE name='$Soyad' LIMIT 1");
+    
 
 	
 	
